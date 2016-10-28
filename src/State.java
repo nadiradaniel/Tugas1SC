@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class State{
 	private Position toni;
-	public  Set<Position> barang = new HashSet<Position>();
+	private static  Set<Position> barang = new HashSet<Position>();
 	private static HashSet<Position> tembok = new HashSet<Position>();
 	
 	public State(Position toni){
@@ -25,7 +25,7 @@ public class State{
 		barang.add(b);
 	}
 	
-	public Set<Position> getBarang(){
+	public static Set<Position> getBarang(){
 		return barang;
 	}
 	

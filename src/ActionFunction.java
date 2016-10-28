@@ -12,9 +12,7 @@ public class ActionFunction implements ActionsFunction {
 		Set<Action> actionSet = new HashSet<>();
 		State st = (State) s;
 		
-		if(st.canTake()){
-				actionSet.add(new Actions(Actions.AMBIL));
-		}
+		
 		if(st.canUp()){
 				actionSet.add(new Actions (Actions.UP));
 		}
@@ -26,6 +24,9 @@ public class ActionFunction implements ActionsFunction {
 		}
 		if(st.canLeft()){
 				actionSet.add(new Actions (Actions.LEFT));
+		}
+		if(st.canTake()){
+			actionSet.add(new Actions(Actions.AMBIL));
 		}
 
 
