@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class State{
 	private Position toni;
-	private static  Set<Position> barang = new HashSet<Position>();
+	public  Set<Position> barang = new HashSet<Position>();
 	private static HashSet<Position> tembok = new HashSet<Position>();
 	
 	public State(Position toni){
@@ -25,7 +25,7 @@ public class State{
 		barang.add(b);
 	}
 	
-	public static Set<Position> getBarang(){
+	public Set<Position> getBarang(){
 		return barang;
 	}
 	
@@ -97,7 +97,7 @@ public class State{
 	
 	
 	public boolean isGoal(){
-		System.out.println(barang.size());
+	
 //		System.out.println(barang.size());
 		return barang.size() == 0;
 //		if(toni.equals(new Position(1,2))){
